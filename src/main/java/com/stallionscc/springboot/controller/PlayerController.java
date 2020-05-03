@@ -47,7 +47,7 @@ public class PlayerController {
 		@PutMapping("/{id}")
 		public Player updatePlayer(@RequestBody Player player, @PathVariable ("id") long playerId) {
 			 Player existingPlayer = this.playerRepository.findById(playerId)
-				.orElseThrow(() -> new ResourceNotFoundException("User not found with id :" + playerId));
+				.orElseThrow(() -> new ResourceNotFoundException("Player not found with id :" + playerId));
 			 existingPlayer.setFirstName(player.getFirstName());
 			 existingPlayer.setLastName(player.getLastName());
 			 existingPlayer.setDate_of_birth(player.getDate_of_birth());
@@ -68,7 +68,7 @@ public class PlayerController {
 		@DeleteMapping("/{id}")
 		public ResponseEntity<Player> deletePlayer(@PathVariable ("id") long playerId){
 			 Player existingPlayer = this.playerRepository.findById(playerId)
-						.orElseThrow(() -> new ResourceNotFoundException("User not found with id :" + playerId));
+						.orElseThrow(() -> new ResourceNotFoundException("Player not found with id :" + playerId));
 			 this.playerRepository.delete(existingPlayer);
 			 return ResponseEntity.ok().build();
 		}

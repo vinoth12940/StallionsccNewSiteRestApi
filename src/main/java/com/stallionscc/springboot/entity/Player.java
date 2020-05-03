@@ -210,6 +210,4 @@ public class Player {
 				+ image_path + "]";
 	}
 	
-	
-
 }
