@@ -1,12 +1,16 @@
 package com.stallionscc.springboot.entity;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -46,13 +50,17 @@ public class Tournament {
 	
 	@Column(name="organiser_contact", nullable = false)
 	private String organiser_contact;
+	
+	@OneToMany(targetEntity = Matches.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "tourmatch_fk", referencedColumnName = "tournament_id")
+	private List<Matches> matches;
 
 	public Tournament() {
 		super();
 	}
 
 	public Tournament(long tournament_id, String tournament_name, Date start_date, Date end_date, int no_of_matches,
-			String match_format, String organiser_name, String organiser_contact) {
+			String match_format, String organiser_name, String organiser_contact, List<Matches> matches) {
 		super();
 		this.tournament_id = tournament_id;
 		this.tournament_name = tournament_name;
@@ -62,6 +70,7 @@ public class Tournament {
 		this.match_format = match_format;
 		this.organiser_name = organiser_name;
 		this.organiser_contact = organiser_contact;
+		this.matches = matches;
 	}
 
 	public long getTournament_id() {
@@ -128,12 +137,22 @@ public class Tournament {
 		this.organiser_contact = organiser_contact;
 	}
 
+	public List<Matches> getMatches() {
+		return matches;
+	}
+
+	public void setMatches(List<Matches> matches) {
+		this.matches = matches;
+	}
+
 	@Override
 	public String toString() {
 		return "Tournament [tournament_id=" + tournament_id + ", tournament_name=" + tournament_name + ", start_date="
 				+ start_date + ", end_date=" + end_date + ", no_of_matches=" + no_of_matches + ", match_format="
 				+ match_format + ", organiser_name=" + organiser_name + ", organiser_contact=" + organiser_contact
-				+ "]";
+				+ ", matches=" + matches + "]";
 	}
+	
+	
 
 }
