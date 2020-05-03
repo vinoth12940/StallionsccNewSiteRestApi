@@ -1,0 +1,55 @@
+{
+ "tournament": {
+        "tournament_name": "New tournament tets",
+        "start_date": "2020-09-01",
+        "end_date": "2020-11-02",
+        "no_of_matches": 6,
+        "match_format": "20 format",
+        "organiser_name": "new organizer",
+        "organiser_contact": "7895643210",
+        "matches": [
+        	{
+        		"match_id": 1,
+        		"opponent_team_name": "test team1",
+        		"match_date": "2020-09-09",
+        		"is_tournament_match": 1,
+        		"ground_name": "Area 58",
+        		"match_type": "20/20",
+        		"match_overs": "20",
+        		"stallions_match_result": "Won",
+        		"match_result": "Lost",
+        		"is_toss_stallions": 1,
+        		"batting_first": "stallions",
+        		"is_mom_stallions": 1,
+        		"mom_player_name": "Raghave",
+        		"stallions_total_runs": "258",
+        		"stallions_total_wickets": "5",
+        		"stallions_total_overs": "30",
+        		"opponent_total_runs": "170",
+        		"opponent_total_wickets": "10",
+        		"opponent_total_overs": "25"
+        	},
+        	{
+        		"match_id": 2,
+        		"opponent_team_name": "test2",
+        		"match_date": "2020-05-02",
+        		"is_tournament_match": 0,
+        		"ground_name": "Agni CG",
+        		"match_type": "25 oves",
+        		"match_overs": "25",
+        		"stallions_match_result": "Won",
+        		"match_result": "Won",
+        		"is_toss_stallions": 1,
+        		"batting_first": "test2",
+        		"is_mom_stallions": 1,
+        		"mom_player_name": "Vignesh",
+        		"stallions_total_runs": "152",
+        		"stallions_total_wickets": "5",
+        		"stallions_total_overs": "20",
+        		"opponent_total_runs": "120",
+        		"opponent_total_wickets": "10",
+        		"opponent_total_overs": "18"
+        	}
+        ]
+	}	
+}

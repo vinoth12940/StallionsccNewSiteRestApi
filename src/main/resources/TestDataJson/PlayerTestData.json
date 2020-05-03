@@ -1,0 +1,15 @@
+{
+	"firstName" : "vino",
+	"lastName" : "raja",
+	"date_of_birth" : "2014-04-24",
+	"born_place" : "mumbai",
+	"nick_name" : "sachin",
+	"batting_style" : "Right hand batsman",
+	"bowling_style" : "Right arm medium pace",
+	"player_role" : "Wicket keeper batsman",
+	"personal_contact_email_id" : "abc@gmail.com",
+	"address" : "1st cross street",
+	"contact_number" : "123456789",
+	"is_player_active" : 1,
+	"image_path" : "testpath"
+}
