@@ -2,12 +2,15 @@ package com.stallionscc.springboot.dto;
 
 import java.util.List;
 
+
 import com.stallionscc.springboot.entity.StallionsScorecard;
 
 public class ScoreCardDetail {
-
+	
+	
 	private List<StallionsScorecard> stallionsscorecard;
 
+	
 	public List<StallionsScorecard> getStallionsscorecard() {
 		return stallionsscorecard;
 	}
