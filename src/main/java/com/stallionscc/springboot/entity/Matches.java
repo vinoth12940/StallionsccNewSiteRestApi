@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -14,66 +16,69 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name = "MatchSummary")
 public class Matches {
-	
+
 	@Id
-	@Column(name="match_id")
+	@Column(name = "match_id")
 	private long match_id;
-	
-	@Column(name="opponent_team_name")
+
+	@Column(name = "opponent_team_name")
 	private String opponent_team_name;
-	
-	@Column(name="match_date")
+
+	@Column(name = "match_date")
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date match_date;
-	
-	@Column(name="is_tournament_match")
+
+	@Column(name = "is_tournament_match")
 	private Boolean is_tournament_match;
-	
-	@Column(name="ground_name")
+
+	@Column(name = "ground_name")
 	private String ground_name;
-	
-	@Column(name="match_type")
+
+	@Column(name = "match_type")
 	private String match_type;
-	
-	@Column(name="match_overs")
+
+	@Column(name = "match_overs")
 	private String match_overs;
-	
-	@Column(name="stallions_match_result")
+
+	@Column(name = "stallions_match_result")
 	private String stallions_match_result;
-	
-	@Column(name="match_result")
+
+	@Column(name = "match_result")
 	private String match_result;
-	
-	@Column(name="is_toss_stallions")
+
+	@Column(name = "is_toss_stallions")
 	private Boolean is_toss_stallions;
-	
-	@Column(name="batting_first")
+
+	@Column(name = "batting_first")
 	private String batting_first;
-	
-	@Column(name="is_mom_stallions")
+
+	@Column(name = "is_mom_stallions")
 	private Boolean is_mom_stallions;
-	
-	@Column(name="mom_player_name")
+
+	@Column(name = "mom_player_name")
 	private String mom_player_name;
-	
-	@Column(name="stallions_total_runs")
+
+	@Column(name = "stallions_total_runs")
 	private String stallions_total_runs;
-	
-	@Column(name="stallions_total_wickets")
+
+	@Column(name = "stallions_total_wickets")
 	private String stallions_total_wickets;
-	
-	@Column(name="stallions_total_overs")
+
+	@Column(name = "stallions_total_overs")
 	private String stallions_total_overs;
-	
-	@Column(name="opponent_total_runs")
+
+	@Column(name = "opponent_total_runs")
 	private String opponent_total_runs;
-	
-	@Column(name="opponent_total_wickets")
+
+	@Column(name = "opponent_total_wickets")
 	private String opponent_total_wickets;
-	
-	@Column(name="opponent_total_overs")
+
+	@Column(name = "opponent_total_overs")
 	private String opponent_total_overs;
+
+	@Column(name = "tournament_id")
+	private long tournament_id;
 
 	public Matches() {
 		super();
@@ -84,7 +89,7 @@ public class Matches {
 			String match_result, Boolean is_toss_stallions, String batting_first, Boolean is_mom_stallions,
 			String mom_player_name, String stallions_total_runs, String stallions_total_wickets,
 			String stallions_total_overs, String opponent_total_runs, String opponent_total_wickets,
-			String opponent_total_overs) {
+			String opponent_total_overs, long tournament_id) {
 		super();
 		this.match_id = match_id;
 		this.opponent_team_name = opponent_team_name;
@@ -105,6 +110,15 @@ public class Matches {
 		this.opponent_total_runs = opponent_total_runs;
 		this.opponent_total_wickets = opponent_total_wickets;
 		this.opponent_total_overs = opponent_total_overs;
+		this.tournament_id = tournament_id;
+	}
+
+	public long getTournament_id() {
+		return tournament_id;
+	}
+
+	public void setTournament_id(long tournament_id) {
+		this.tournament_id = tournament_id;
 	}
 
 	public long getMatch_id() {
@@ -269,7 +283,9 @@ public class Matches {
 				+ mom_player_name + ", stallions_total_runs=" + stallions_total_runs + ", stallions_total_wickets="
 				+ stallions_total_wickets + ", stallions_total_overs=" + stallions_total_overs
 				+ ", opponent_total_runs=" + opponent_total_runs + ", opponent_total_wickets=" + opponent_total_wickets
-				+ ", opponent_total_overs=" + opponent_total_overs + "]";
+				+ ", opponent_total_overs=" + opponent_total_overs + ", tournament_id=" + tournament_id + "]";
 	}
+
 	
+
 }

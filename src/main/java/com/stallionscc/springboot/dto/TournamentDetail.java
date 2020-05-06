@@ -3,15 +3,15 @@ package com.stallionscc.springboot.dto;
 import com.stallionscc.springboot.entity.Tournament;
 
 
-public class TournamentMatchDetail {
+public class TournamentDetail {
 	
 	private Tournament tournament;
 
-	public TournamentMatchDetail() {
+	public TournamentDetail() {
 		super();
 	}
 
-	public TournamentMatchDetail(Tournament tournament) {
+	public TournamentDetail(Tournament tournament) {
 		super();
 		this.tournament = tournament;
 	}
@@ -26,7 +26,7 @@ public class TournamentMatchDetail {
 
 	@Override
 	public String toString() {
-		return "TournamentMatchDetail [tournament=" + tournament + ", getTournament()=" + getTournament()
+		return "TournamentDetail [tournament=" + tournament + ", getTournament()=" + getTournament()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
 				+ "]";
 	}

@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.stallionscc.springboot.dto.TournamentMatchDetail;
+import com.stallionscc.springboot.dto.MatchDetail;
+import com.stallionscc.springboot.dto.TournamentDetail;
+import com.stallionscc.springboot.entity.Matches;
 import com.stallionscc.springboot.entity.Tournament;
 import com.stallionscc.springboot.repository.MatchRepository;
 import com.stallionscc.springboot.repository.TournamentRepository;
@@ -25,10 +27,15 @@ public class MatchController {
 	private MatchRepository matchRepository;
 	
 	@PostMapping("/save")
-	public Tournament createNewTournament(@RequestBody TournamentMatchDetail tournamentMatchDetail) {
-		return tournamentRepository.save(tournamentMatchDetail.getTournament());
+	public Tournament createNewTournament(@RequestBody TournamentDetail tournamentDetail) {
+		return tournamentRepository.save(tournamentDetail.getTournament());
 	}
 	
+	@PostMapping("/matchsave")
+	public Matches createNewMatch(@RequestBody MatchDetail matchDetail ) {
+		System.out.println(matchDetail.toString());
+		return matchRepository.save(matchDetail.getMatch());
+	}
 	
 	@GetMapping
 	public List<Tournament> findAllTournamentDetail(){
