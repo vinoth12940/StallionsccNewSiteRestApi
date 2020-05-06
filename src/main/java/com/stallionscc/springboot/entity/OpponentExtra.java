@@ -137,7 +137,4 @@ public class OpponentExtra {
 				+ ", extras_total_wides=" + extras_total_wides + ", extras_no_balls=" + extras_no_balls
 				+ ", opponent_total=" + opponent_total + "]";
 	}
-	
-	
-
 }
