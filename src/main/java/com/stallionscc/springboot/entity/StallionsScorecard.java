@@ -11,7 +11,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "StallionsScorecard")
-
 public class StallionsScorecard {
 
 	@Id
