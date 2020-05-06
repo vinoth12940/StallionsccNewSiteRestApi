@@ -1,13 +1,10 @@
 {
-"stallionsscorecard": [
+"opponentScorecard": [
         	{
         		"tournament_id": 1,
-        		"playersSk": 10,
         		"match_id": 1,
         		"player_name": "Pavan",
         		"player_role": "Allrounder",
-        		"is_rested": 0,
-        		"comments": "Good opener",
         		"batting_runs_scored": 50,
         		"batting_balls_faced": 50,
         		"batting_fours": 5,
@@ -34,12 +31,9 @@
         	},
 			{
         		"tournament_id": 1,
-        		"playersSk": 11,
         		"match_id": 1,
         		"player_name": "Rajan",
         		"player_role": "WK batsman",
-        		"is_rested": 0,
-        		"comments": "Wiclet keeper",
         		"batting_runs_scored": 50,
         		"batting_balls_faced": 30,
         		"batting_fours": 5,

@@ -105,23 +105,54 @@ public class StallionsScorecard {
 	@Column(name = "fielding_WK_stumped")
 	private int fielding_WK_stumped;
 
-	@Column(name = "extras_byes")
-	private int extras_byes;
-
-	@Column(name = "extras_leg_byes")
-	private int extras_leg_byes;
-
-	@Column(name = "extras_total_wides")
-	private int extras_total_wides;
-
-	@Column(name = "extras_no_balls")
-	private int extras_no_balls;
-
-	@Column(name = "stallions_total")
-	private int stallions_total;
-
 	@Column(name = "match_keynote")	
 	private String match_keynote;
+
+	public StallionsScorecard() {
+		super();
+	}
+
+	public StallionsScorecard(int score_card_id, int tournament_id, int playersSk, int match_id, String player_name,
+			String player_role, int is_rested, String comments, int batting_runs_scored, int batting_balls_faced,
+			int batting_fours, int batting_six, String batting_how_out, String batting_fielder_name,
+			String batting_Wicket_by_Bowler, int batting_order_of_Wicket, int batting_fall_of_Wicket,
+			int batting_wicket_on_over, int bowling_spell_order, int bowling_over, int bowling_maiden,
+			int bowling_wicket, int bowling_runs_conceded, int bowling_wides, int bowling_no_balls,
+			int fielding_catches_taken, int fielding_catches_dropped, int fielding_total_catches,
+			int fielding_WK_catches, int fielding_WK_stumped, String match_keynote) {
+		super();
+		this.score_card_id = score_card_id;
+		this.tournament_id = tournament_id;
+		this.playersSk = playersSk;
+		this.match_id = match_id;
+		this.player_name = player_name;
+		this.player_role = player_role;
+		this.is_rested = is_rested;
+		this.comments = comments;
+		this.batting_runs_scored = batting_runs_scored;
+		this.batting_balls_faced = batting_balls_faced;
+		this.batting_fours = batting_fours;
+		this.batting_six = batting_six;
+		this.batting_how_out = batting_how_out;
+		this.batting_fielder_name = batting_fielder_name;
+		this.batting_Wicket_by_Bowler = batting_Wicket_by_Bowler;
+		this.batting_order_of_Wicket = batting_order_of_Wicket;
+		this.batting_fall_of_Wicket = batting_fall_of_Wicket;
+		this.batting_wicket_on_over = batting_wicket_on_over;
+		this.bowling_spell_order = bowling_spell_order;
+		this.bowling_over = bowling_over;
+		this.bowling_maiden = bowling_maiden;
+		this.bowling_wicket = bowling_wicket;
+		this.bowling_runs_conceded = bowling_runs_conceded;
+		this.bowling_wides = bowling_wides;
+		this.bowling_no_balls = bowling_no_balls;
+		this.fielding_catches_taken = fielding_catches_taken;
+		this.fielding_catches_dropped = fielding_catches_dropped;
+		this.fielding_total_catches = fielding_total_catches;
+		this.fielding_WK_catches = fielding_WK_catches;
+		this.fielding_WK_stumped = fielding_WK_stumped;
+		this.match_keynote = match_keynote;
+	}
 
 	public int getScore_card_id() {
 		return score_card_id;
@@ -363,105 +394,12 @@ public class StallionsScorecard {
 		this.fielding_WK_stumped = fielding_WK_stumped;
 	}
 
-	public int getExtras_byes() {
-		return extras_byes;
-	}
-
-	public void setExtras_byes(int extras_byes) {
-		this.extras_byes = extras_byes;
-	}
-
-	public int getExtras_leg_byes() {
-		return extras_leg_byes;
-	}
-
-	public void setExtras_leg_byes(int extras_leg_byes) {
-		this.extras_leg_byes = extras_leg_byes;
-	}
-
-	public int getExtras_total_wides() {
-		return extras_total_wides;
-	}
-
-	public void setExtras_total_wides(int extras_total_wides) {
-		this.extras_total_wides = extras_total_wides;
-	}
-
-	public int getExtras_no_balls() {
-		return extras_no_balls;
-	}
-
-	public void setExtras_no_balls(int extras_no_balls) {
-		this.extras_no_balls = extras_no_balls;
-	}
-
-	public int getStallions_total() {
-		return stallions_total;
-	}
-
-	public void setStallions_total(int stallions_total) {
-		this.stallions_total = stallions_total;
-	}
-
-	public String getKeynote() {
+	public String getMatch_keynote() {
 		return match_keynote;
 	}
 
-	public void setKeynote(String match_keynote) {
+	public void setMatch_keynote(String match_keynote) {
 		this.match_keynote = match_keynote;
-	}
-
-	public StallionsScorecard(int score_card_id, int tournament_id, int playersSk, int match_id, String player_name,
-			String player_role, int is_rested, String comments, int batting_runs_scored, int batting_balls_faced,
-			int batting_fours, int batting_six, String batting_how_out, String batting_fielder_name,
-			String batting_Wicket_by_Bowler, int batting_order_of_Wicket, int batting_fall_of_Wicket,
-			int batting_wicket_on_over, int bowling_spell_order, int bowling_over, int bowling_maiden,
-			int bowling_wicket, int bowling_runs_conceded, int bowling_wides, int bowling_no_balls,
-			int fielding_catches_taken, int fielding_catches_dropped, int fielding_total_catches,
-			int fielding_WK_catches, int fielding_WK_stumped, int extras_byes, int extras_leg_byes,
-			int extras_total_wides, int extras_no_balls, int stallions_total, String match_keynote) {
-		super();
-		this.score_card_id = score_card_id;
-		this.tournament_id = tournament_id;
-		this.playersSk = playersSk;
-		this.match_id = match_id;
-		this.player_name = player_name;
-		this.player_role = player_role;
-		this.is_rested = is_rested;
-		this.comments = comments;
-		this.batting_runs_scored = batting_runs_scored;
-		this.batting_balls_faced = batting_balls_faced;
-		this.batting_fours = batting_fours;
-		this.batting_six = batting_six;
-		this.batting_how_out = batting_how_out;
-		this.batting_fielder_name = batting_fielder_name;
-		this.batting_Wicket_by_Bowler = batting_Wicket_by_Bowler;
-		this.batting_order_of_Wicket = batting_order_of_Wicket;
-		this.batting_fall_of_Wicket = batting_fall_of_Wicket;
-		this.batting_wicket_on_over = batting_wicket_on_over;
-		this.bowling_spell_order = bowling_spell_order;
-		this.bowling_over = bowling_over;
-		this.bowling_maiden = bowling_maiden;
-		this.bowling_wicket = bowling_wicket;
-		this.bowling_runs_conceded = bowling_runs_conceded;
-		this.bowling_wides = bowling_wides;
-		this.bowling_no_balls = bowling_no_balls;
-		this.fielding_catches_taken = fielding_catches_taken;
-		this.fielding_catches_dropped = fielding_catches_dropped;
-		this.fielding_total_catches = fielding_total_catches;
-		this.fielding_WK_catches = fielding_WK_catches;
-		this.fielding_WK_stumped = fielding_WK_stumped;
-		this.extras_byes = extras_byes;
-		this.extras_leg_byes = extras_leg_byes;
-		this.extras_total_wides = extras_total_wides;
-		this.extras_no_balls = extras_no_balls;
-		this.stallions_total = stallions_total;
-		this.match_keynote = match_keynote;
-	}
-
-	public StallionsScorecard() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -480,9 +418,7 @@ public class StallionsScorecard {
 				+ ", bowling_no_balls=" + bowling_no_balls + ", fielding_catches_taken=" + fielding_catches_taken
 				+ ", fielding_catches_dropped=" + fielding_catches_dropped + ", fielding_total_catches="
 				+ fielding_total_catches + ", fielding_WK_catches=" + fielding_WK_catches + ", fielding_WK_stumped="
-				+ fielding_WK_stumped + ", extras_byes=" + extras_byes + ", extras_leg_byes=" + extras_leg_byes
-				+ ", extras_total_wides=" + extras_total_wides + ", extras_no_balls=" + extras_no_balls
-				+ ", stallions_total=" + stallions_total + ", match_keynote=" + match_keynote + "]";
+				+ fielding_WK_stumped + ", match_keynote=" + match_keynote + "]";
 	}
 
 }

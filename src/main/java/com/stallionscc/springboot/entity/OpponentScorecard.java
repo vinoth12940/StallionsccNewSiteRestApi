@@ -19,9 +19,6 @@ public class OpponentScorecard {
 	@Column(name = "tournament_id")
 	private int tournament_id;
 
-	@Column(name = "playersSk")
-	private int playersSk;
-
 	@Column(name = "match_id")
 	private int match_id;
 
@@ -104,8 +101,8 @@ public class OpponentScorecard {
 		super();
 	}
 
-	public OpponentScorecard(int score_card_id, int tournament_id, int playersSk, int match_id, String player_name,
-			String player_role, int batting_runs_scored, int batting_balls_faced, int batting_fours, int batting_six,
+	public OpponentScorecard(int score_card_id, int tournament_id, int match_id, String player_name, String player_role,
+			int batting_runs_scored, int batting_balls_faced, int batting_fours, int batting_six,
 			String batting_how_out, String batting_fielder_name, String batting_Wicket_by_Bowler,
 			int batting_order_of_Wicket, int batting_fall_of_Wicket, int batting_wicket_on_over,
 			int bowling_spell_order, int bowling_over, int bowling_maiden, int bowling_wicket,
@@ -115,7 +112,6 @@ public class OpponentScorecard {
 		super();
 		this.score_card_id = score_card_id;
 		this.tournament_id = tournament_id;
-		this.playersSk = playersSk;
 		this.match_id = match_id;
 		this.player_name = player_name;
 		this.player_role = player_role;
@@ -158,14 +154,6 @@ public class OpponentScorecard {
 
 	public void setTournament_id(int tournament_id) {
 		this.tournament_id = tournament_id;
-	}
-
-	public int getPlayersSk() {
-		return playersSk;
-	}
-
-	public void setPlayersSk(int playersSk) {
-		this.playersSk = playersSk;
 	}
 
 	public int getMatch_id() {
@@ -378,11 +366,11 @@ public class OpponentScorecard {
 
 	@Override
 	public String toString() {
-		return "OpponentScorecard [score_card_id=" + score_card_id + ", tournament_id=" + tournament_id + ", playersSk="
-				+ playersSk + ", match_id=" + match_id + ", player_name=" + player_name + ", player_role=" + player_role
-				+ ", batting_runs_scored=" + batting_runs_scored + ", batting_balls_faced=" + batting_balls_faced
-				+ ", batting_fours=" + batting_fours + ", batting_six=" + batting_six + ", batting_how_out="
-				+ batting_how_out + ", batting_fielder_name=" + batting_fielder_name + ", batting_Wicket_by_Bowler="
+		return "OpponentScorecard [score_card_id=" + score_card_id + ", tournament_id=" + tournament_id + ", match_id="
+				+ match_id + ", player_name=" + player_name + ", player_role=" + player_role + ", batting_runs_scored="
+				+ batting_runs_scored + ", batting_balls_faced=" + batting_balls_faced + ", batting_fours="
+				+ batting_fours + ", batting_six=" + batting_six + ", batting_how_out=" + batting_how_out
+				+ ", batting_fielder_name=" + batting_fielder_name + ", batting_Wicket_by_Bowler="
 				+ batting_Wicket_by_Bowler + ", batting_order_of_Wicket=" + batting_order_of_Wicket
 				+ ", batting_fall_of_Wicket=" + batting_fall_of_Wicket + ", batting_wicket_on_over="
 				+ batting_wicket_on_over + ", bowling_spell_order=" + bowling_spell_order + ", bowling_over="

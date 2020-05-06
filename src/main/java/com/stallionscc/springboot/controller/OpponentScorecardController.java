@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stallionscc.springboot.dto.ScoreCardDetail;
-import com.stallionscc.springboot.entity.StallionsScorecard;
-import com.stallionscc.springboot.repository.ScorecardRepository;
-import com.stallionscc.springboot.service.ScorecardService;
+import com.stallionscc.springboot.entity.OpponentScorecard;
+import com.stallionscc.springboot.service.OpponentScorecardService;
+
 
 @RestController
-@RequestMapping("api/stallionsScorecard")
-public class StallionsScorecardController {
-	
+@RequestMapping("api/OpponentScorecard")
+public class OpponentScorecardController {
+
 	@Autowired
-	private ScorecardService scorecardservice;
+	private OpponentScorecardService opponentScorecardService;
 	
 	@PostMapping("/save")
-	public List<StallionsScorecard> createNewStallionsScorecard(@RequestBody ScoreCardDetail scorecardDetail) {
-		return scorecardservice.savestallionsscorecard(scorecardDetail);
+	public List<OpponentScorecard> createNewOpponentScorecard(@RequestBody ScoreCardDetail scorecardDetail) {
+		return opponentScorecardService.saveOpponentcorecard(scorecardDetail);
 	}
 }
