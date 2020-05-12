@@ -19,13 +19,13 @@ public class StallionsScorecard {
 	private int score_card_id;
 
 	@Column(name = "tournament_id")
-	private int tournament_id;
+	private long tournament_id;
 
 	@Column(name = "playersSk")
-	private int playersSk;
+	private long playersSk;
 
 	@Column(name = "match_id")
-	private int match_id;
+	private long match_id;
 
 	@Column(name = "player_name")
 	private String player_name;
@@ -112,7 +112,7 @@ public class StallionsScorecard {
 		super();
 	}
 
-	public StallionsScorecard(int score_card_id, int tournament_id, int playersSk, int match_id, String player_name,
+	public StallionsScorecard(int score_card_id, long tournament_id, long playersSk, long match_id, String player_name,
 			String player_role, int is_rested, String comments, int batting_runs_scored, int batting_balls_faced,
 			int batting_fours, int batting_six, String batting_how_out, String batting_fielder_name,
 			String batting_Wicket_by_Bowler, int batting_order_of_Wicket, int batting_fall_of_Wicket,
@@ -162,27 +162,27 @@ public class StallionsScorecard {
 		this.score_card_id = score_card_id;
 	}
 
-	public int getTournament_id() {
+	public long getTournament_id() {
 		return tournament_id;
 	}
 
-	public void setTournament_id(int tournament_id) {
+	public void setTournament_id(long tournament_id) {
 		this.tournament_id = tournament_id;
 	}
 
-	public int getPlayersSk() {
+	public long getPlayersSk() {
 		return playersSk;
 	}
 
-	public void setPlayersSk(int playersSk) {
+	public void setPlayersSk(long playersSk) {
 		this.playersSk = playersSk;
 	}
 
-	public int getMatch_id() {
+	public long getMatch_id() {
 		return match_id;
 	}
 
-	public void setMatch_id(int match_id) {
+	public void setMatch_id(long match_id) {
 		this.match_id = match_id;
 	}
 

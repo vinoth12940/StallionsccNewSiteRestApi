@@ -17,13 +17,10 @@ public class OpponentExtra {
 	private int id;
 
 	@Column(name = "tournament_id")
-	private int tournament_id;
-
-	@Column(name = "playersSk")
-	private int playersSk;
+	private long tournament_id;
 
 	@Column(name = "match_id")
-	private int match_id;
+	private long match_id;
 
 	@Column(name = "extras_byes")
 	private int extras_byes;
@@ -39,19 +36,23 @@ public class OpponentExtra {
 
 	@Column(name = "opponent_total")
 	private int opponent_total;
+	
+	@Column(name= "key_note")
+	private String key_note;
 
-	public OpponentExtra(int id, int tournament_id, int playersSk, int match_id, int extras_byes, int extras_leg_byes,
-			int extras_total_wides, int extras_no_balls, int opponent_total) {
+	public OpponentExtra(int id, long tournament_id, long match_id, int extras_byes, int extras_leg_byes,
+			int extras_total_wides, int extras_no_balls, int opponent_total, String key_note) {
 		super();
 		this.id = id;
 		this.tournament_id = tournament_id;
-		this.playersSk = playersSk;
+	
 		this.match_id = match_id;
 		this.extras_byes = extras_byes;
 		this.extras_leg_byes = extras_leg_byes;
 		this.extras_total_wides = extras_total_wides;
 		this.extras_no_balls = extras_no_balls;
 		this.opponent_total = opponent_total;
+		this.key_note =key_note;
 	}
 
 	public OpponentExtra() {
@@ -66,27 +67,19 @@ public class OpponentExtra {
 		this.id = id;
 	}
 
-	public int getTournament_id() {
+	public long getTournament_id() {
 		return tournament_id;
 	}
 
-	public void setTournament_id(int tournament_id) {
+	public void setTournament_id(long tournament_id) {
 		this.tournament_id = tournament_id;
-	}
+	}	
 
-	public int getPlayersSk() {
-		return playersSk;
-	}
-
-	public void setPlayersSk(int playersSk) {
-		this.playersSk = playersSk;
-	}
-
-	public int getMatch_id() {
+	public long getMatch_id() {
 		return match_id;
 	}
 
-	public void setMatch_id(int match_id) {
+	public void setMatch_id(long match_id) {
 		this.match_id = match_id;
 	}
 
@@ -130,11 +123,23 @@ public class OpponentExtra {
 		this.opponent_total = opponent_total;
 	}
 
+	public String getKey_note() {
+		return key_note;
+	}
+
+	public void setKey_note(String key_note) {
+		this.key_note = key_note;
+	}
+
 	@Override
 	public String toString() {
-		return "OpponentExtra [id=" + id + ", tournament_id=" + tournament_id + ", playersSk=" + playersSk
-				+ ", match_id=" + match_id + ", extras_byes=" + extras_byes + ", extras_leg_byes=" + extras_leg_byes
-				+ ", extras_total_wides=" + extras_total_wides + ", extras_no_balls=" + extras_no_balls
-				+ ", opponent_total=" + opponent_total + "]";
+		return "OpponentExtra [id=" + id + ", tournament_id=" + tournament_id + ", match_id=" + match_id
+				+ ", extras_byes=" + extras_byes + ", extras_leg_byes=" + extras_leg_byes + ", extras_total_wides="
+				+ extras_total_wides + ", extras_no_balls=" + extras_no_balls + ", opponent_total=" + opponent_total
+				+ ", key_note=" + key_note + "]";
 	}
+
+	
+
+	
 }

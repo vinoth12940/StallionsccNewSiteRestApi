@@ -1,0 +1,96 @@
+API's
+
+Tournaments:
+
+GetAllTournaments : http://localhost:8080/api/tournaments
+
+GetTournament by ID:  http://localhost:8080/api/tournaments/{id}
+
+Save Tournament details: http://localhost:8080/api/tournaments
+
+Update Tournament :  http://localhost:8080/api/tournaments/{id}
+
+Delete Tournament : http://localhost:8080/api/tournaments/{id}
+
+Tournament by year: http://localhost:8080/api/tournaments/getbyyear/{id}
+
+
+
+StallionsScoreCard:
+
+
+Get by match id:   http://localhost:8080/api/stallionsScorecard/{id}
+
+Update scorecard :  http://localhost:8080/api/stallionsScorecard/{id}
+
+Save scorecard: http://localhost:8080/api/stallionsScorecard/save
+
+Delete scorecard: http://localhost:8080/api/stallionsScorecard/{id}
+
+
+Opponent Scorecard:
+
+Get by match id:   http://localhost:8080/api/OpponentScorecard/{id}
+
+Update scorecard :  http://localhost:8080/api/OpponentScorecard/{id}
+
+Save scorecard: http://localhost:8080/api/OpponentScorecard/save
+
+Delete scorecard: http://localhost:8080/api/OpponentScorecard/{id}
+
+
+
+Player:
+
+Get All players:   http://localhost:8080/api/players
+
+Get player by id: :  http://localhost:8080/api/players/{id}
+
+Active players: http://localhost:8080/api/players/getActiveplayers
+
+Update player details: http://localhost:8080/api/players/{id}
+
+Save scorecard: http://localhost:8080/api/OpponentScorecard/save
+
+Delete scorecard: http://localhost:8080/api/players/{id}
+
+
+Match:
+
+Save match details: http://localhost:8080/api/matchDetail/save
+
+List of all matches: http://localhost:8080/api/matchDetail
+
+Matches by tournament: http://localhost:8080/api/matchDetail/getallmatches/{id}
+
+Match by id: http://localhost:8080/api/matchDetail/getmatch/{id}
+
+Update match details: Match by id: http://localhost:8080/api/matchDetail/updatematch/{id}
+
+Delete match: http://localhost:8080/api/matchDetail/{id}
+
+
+Extras:
+
+Stallions Extras:
+
+Save :http://localhost:8080/api/totalextra/stallionstotalextra
+
+Retrieve by id: http://localhost:8080/api/totalextra/stallionstotalextra/{id}
+
+update: http://localhost:8080/api/totalextra/stallionstotalextra/{id}
+
+Delete: http://localhost:8080/api/totalextra/stallionsextras/{id}
+
+
+
+Opponents Extras
+
+Save : http://localhost:8080/api/totalextra/opponenttotalextra
+
+Retrieve by id: http://localhost:8080/api/totalextra/opponenttotalextra/{id}
+
+update: http://localhost:8080/api/totalextra/opponenttotalextra/{id}
+
+Delete: http://localhost:8080/api/totalextra/opponentextras/{id}
+

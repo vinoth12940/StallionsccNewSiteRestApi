@@ -67,4 +67,9 @@ public class TournamentController {
 		 this.tournamentRepository.delete(existingTournament);
 		 return ResponseEntity.ok().build();
 	}
+	
+	@GetMapping("getbyyear/{id}")
+	public List<Tournament> getTournamentbyyear(@PathVariable ("id") int year) {
+		return tournamentRepository.getTournamentByYear(year);
+	}
 }

@@ -10,17 +10,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "StallionsExtra")
 public class StallionsExtra {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "stall_extra_id")
 	private int id;
 
 	@Column(name = "tournament_id")
 	private int tournament_id;
-
-	@Column(name = "playersSk")
-	private int playersSk;
 
 	@Column(name = "match_id")
 	private int match_id;
@@ -40,16 +37,19 @@ public class StallionsExtra {
 	@Column(name = "stallions_total")
 	private int stallions_total;
 
+	@Column(name = "key_note")
+	private String key_note;
+
 	public StallionsExtra() {
 		super();
 	}
 
 	public StallionsExtra(int id, int tournament_id, int playersSk, int match_id, int extras_byes, int extras_leg_byes,
-			int extras_total_wides, int extras_no_balls, int stallions_total) {
+			int extras_total_wides, int extras_no_balls, int stallions_total, String key_note) {
 		super();
 		this.id = id;
 		this.tournament_id = tournament_id;
-		this.playersSk = playersSk;
+		this.key_note = key_note;
 		this.match_id = match_id;
 		this.extras_byes = extras_byes;
 		this.extras_leg_byes = extras_leg_byes;
@@ -72,14 +72,6 @@ public class StallionsExtra {
 
 	public void setTournament_id(int tournament_id) {
 		this.tournament_id = tournament_id;
-	}
-
-	public int getPlayersSk() {
-		return playersSk;
-	}
-
-	public void setPlayersSk(int playersSk) {
-		this.playersSk = playersSk;
 	}
 
 	public int getMatch_id() {
@@ -130,12 +122,20 @@ public class StallionsExtra {
 		this.stallions_total = stallions_total;
 	}
 
+	public String getKey_note() {
+		return key_note;
+	}
+
+	public void setKey_note(String key_note) {
+		this.key_note = key_note;
+	}
+
 	@Override
 	public String toString() {
-		return "StallionsExtra [id=" + id + ", tournament_id=" + tournament_id + ", playersSk=" + playersSk
-				+ ", match_id=" + match_id + ", extras_byes=" + extras_byes + ", extras_leg_byes=" + extras_leg_byes
-				+ ", extras_total_wides=" + extras_total_wides + ", extras_no_balls=" + extras_no_balls
-				+ ", stallions_total=" + stallions_total + "]";
+		return "StallionsExtra [id=" + id + ", tournament_id=" + tournament_id + ", match_id=" + match_id
+				+ ", extras_byes=" + extras_byes + ", extras_leg_byes=" + extras_leg_byes + ", extras_total_wides="
+				+ extras_total_wides + ", extras_no_balls=" + extras_no_balls + ", stallions_total=" + stallions_total
+				+ ", key_note=" + key_note + "]";
 	}
-		
+
 }

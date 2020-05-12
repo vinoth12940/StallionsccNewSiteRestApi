@@ -72,4 +72,9 @@ public class PlayerController {
 			 this.playerRepository.delete(existingPlayer);
 			 return ResponseEntity.ok().build();
 		}
+		
+		@GetMapping("/getActiveplayers")
+		public List<Player> getallActiveplayer(){
+			return this.playerRepository.fetchallActiveplayers();
+		}
 }

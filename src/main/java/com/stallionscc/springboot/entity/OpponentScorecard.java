@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
@@ -17,10 +18,10 @@ public class OpponentScorecard {
 	private int score_card_id;
 
 	@Column(name = "tournament_id")
-	private int tournament_id;
+	private long tournament_id;
 
 	@Column(name = "match_id")
-	private int match_id;
+	private long match_id;
 
 	@Column(name = "player_name")
 	private String player_name;
@@ -101,7 +102,7 @@ public class OpponentScorecard {
 		super();
 	}
 
-	public OpponentScorecard(int score_card_id, int tournament_id, int match_id, String player_name, String player_role,
+	public OpponentScorecard(int score_card_id, long tournament_id, long match_id, String player_name, String player_role,
 			int batting_runs_scored, int batting_balls_faced, int batting_fours, int batting_six,
 			String batting_how_out, String batting_fielder_name, String batting_Wicket_by_Bowler,
 			int batting_order_of_Wicket, int batting_fall_of_Wicket, int batting_wicket_on_over,
@@ -148,7 +149,7 @@ public class OpponentScorecard {
 		this.score_card_id = score_card_id;
 	}
 
-	public int getTournament_id() {
+	public long getTournament_id() {
 		return tournament_id;
 	}
 
@@ -156,7 +157,7 @@ public class OpponentScorecard {
 		this.tournament_id = tournament_id;
 	}
 
-	public int getMatch_id() {
+	public long getMatch_id() {
 		return match_id;
 	}
 
@@ -363,6 +364,8 @@ public class OpponentScorecard {
 	public void setMatch_keynote(String match_keynote) {
 		this.match_keynote = match_keynote;
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -381,5 +384,6 @@ public class OpponentScorecard {
 				+ fielding_total_catches + ", fielding_WK_catches=" + fielding_WK_catches + ", fielding_WK_stumped="
 				+ fielding_WK_stumped + ", match_keynote=" + match_keynote + "]";
 	}
+	
 	
 }
