@@ -94,7 +94,6 @@ update: http://localhost:8080/api/totalextra/opponenttotalextra/{id}
 
 Delete: http://localhost:8080/api/totalextra/opponentextras/{id}
 
-https://bezkoder.com/spring-boot-jwt-authentication/
 
 Methods	Urls									Actions
 POST	http://localhost:8080/api/auth/signup	signup new account
