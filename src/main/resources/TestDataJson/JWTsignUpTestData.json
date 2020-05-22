@@ -1,0 +1,6 @@
+{
+	"username": "superadmin",
+	"email": "superadmin@stallionscc.com",
+	"password": "password@123",
+	"role": ["admin", "mod", "user"]
+}

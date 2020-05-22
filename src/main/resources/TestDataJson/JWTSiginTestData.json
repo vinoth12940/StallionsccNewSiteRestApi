@@ -1,0 +1,24 @@
+{
+	"username": "admin",
+	"password": "password@123"
+}
+
+/*Step1:
+	Signin get the TokenTyep and accesstoken like below 
+		
+		{
+    "id": 1,
+    "username": "admin",
+    "email": "admin@stallionscc.com",
+    "roles": [
+        "ROLE_USER",
+        "ROLE_MODERATOR"
+    ],
+    "tokenType": "Bearer",
+    "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTU5MDE3NDgzMCwiZXhwIjoxNTkwMjYxMjMwfQ.r3HC3SWroZtko8JU7mrQxGCPlOAvhlnQu5h0aiv8OhDG-o84Ln4q0_miKqavg2eWpO_olHUNfvgoMM0JlTuqqA"
+}
+
+step 2:
+	access user/admin/mod url or CRUD using tokentype & accessToken (GET method)
+*/
+	
